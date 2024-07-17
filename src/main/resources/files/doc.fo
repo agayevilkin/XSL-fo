@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <!-- Layout master set definition -->
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="simple">
+            <fo:region-body margin="1in"/>
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+
+    <!-- Page sequence using the simple master layout -->
+    <fo:page-sequence master-reference="simple">
+        <fo:flow flow-name="xsl-region-body">
+            <!-- Block containing inline styled text -->
+            <fo:block>
+                <fo:inline font-weight="bold">Text</fo:inline>
+                <fo:inline font-style="italic">Text2</fo:inline>
+            </fo:block>
+            <!-- Table with two columns and one row -->
+            <fo:table border="0.5pt solid black" table-layout="fixed" width="100%">
+                <fo:table-column column-width="50%"/>
+                <fo:table-column column-width="50%"/>
+                <fo:table-body>
+                    <fo:table-row>
+                        <fo:table-cell border="0.5pt solid black" padding="5pt">
+                            <fo:block>Cell1</fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell border="0.5pt solid black" padding="5pt">
+                            <fo:block>Cell2</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                </fo:table-body>
+            </fo:table>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
