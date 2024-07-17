@@ -16,7 +16,7 @@ public class FoFileToPdf {
 
     @SneakyThrows
     public static void main(String[] args) {
-        File xsltFile = new File("src/main/resources/files/doc.xsl");
+        File xsltFile = new File("src/main/resources/files/doc.fo");
         String desktopPath = System.getProperty("user.home") + File.separator + "Desktop";
         File desktopDir = new File(desktopPath);
 
